@@ -1,7 +1,7 @@
 import React from 'react'
 import './homepage.css'
-import Navbar from '../components/navbar/Navbar'
-import QuoteBody from '../components/quote/QuoteBody'
+import Navbar from '../../components/navbar/Navbar'
+import QuoteBody from '../../components/quote/QuoteBody'
 function HomePage() {
   return (
      <div className='homepage'>

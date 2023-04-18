@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import './quotebody.css'
 import axios from 'axios'
+import { addItem } from '../../utils/BookmarkSlice'
+import { useDispatch } from 'react-redux'
 function QuoteBody() {
+
     const [quote,setQuote] = useState({})
     const [tags,setTags] = useState([])
-
+    const dispatch = useDispatch()
     const fetchData = ()=>{
         try {
          axios.get('https://api.quotable.io/random').then(({data})=>{
-            console.log(data);
+            
             setQuote(data)
 
          })
 
          axios.get('https://api.quotable.io/tags').then(({data})=>{
-            console.log(data);
+           
             setTags(data)
          })
     
@@ -44,6 +47,10 @@ function QuoteBody() {
     useEffect(()=>{
         fetchData();
     },[])
+    const addToBook = (e)=>{
+        dispatch(addItem(e))
+        fetchData();
+    }
     return (
         <>
         <div className='Body'>
@@ -54,7 +61,10 @@ function QuoteBody() {
 
                 <div className='atterbutes'>
                     <span>-{quote.authorSlug}</span>
-                    <button className='addTobook'>+</button>
+                    <button className='addTobook' onClick={(e)=>{
+                        
+                        addToBook(quote)
+                    }}>+</button>
                 </div>
 
             </div>
