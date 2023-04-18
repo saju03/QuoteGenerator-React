@@ -1,23 +1,60 @@
 .Body{
-    background-color: rgb(53, 207, 74);
+    position: static;
+    background-color: rgb(23, 168, 95);
     padding: 1rem 3rem;
     padding-bottom: 2rem;
     border-radius: 0.5rem;
     margin-left: 30%;
     margin-right: 30%;
     margin-top: 10%;
+    height: 150px;
     font-family: sans-serif;
-  
+    min-width: 200px;
+    min-height: 100px;
 }
 .message{
+    display: inline-block;
     padding-bottom: 30px;
-    max-width: 450px;
+    min-width: 200px;
     overflow-wrap: break-word;
+
+  
+   
+    
 }
 .atterbutes{
+    
+    display: flex;
+    
+    justify-content: space-evenly;
+    
+}
+
+.actions{
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10%;
+
+    font-family: sans-serif;
+}
+.dropbox{
+    width: 150px;
+    border-radius: 20px;
+    margin: 20px
+}
+.drop{
     display: flex;
     justify-content: center;
 }
-.addTobook{
-    margin-left: 40%;
+.next{
+    display: flex;
+    justify-content: center;    
+}
+.nextBtn{
+    width: 100px;
+    height: 20px;
+    background-color: rgb(6, 152, 36);
+    border: none;
+    color: white;
+    border-radius: 20px;
 }
