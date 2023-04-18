@@ -1,0 +1,23 @@
+.Body{
+    background-color: rgb(53, 207, 74);
+    padding: 1rem 3rem;
+    padding-bottom: 2rem;
+    border-radius: 0.5rem;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    font-family: sans-serif;
+  
+}
+.message{
+    padding-bottom: 30px;
+    max-width: 450px;
+    overflow-wrap: break-word;
+}
+.atterbutes{
+    display: flex;
+    justify-content: center;
+}
+.addTobook{
+    margin-left: 40%;
+}
